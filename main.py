@@ -46,6 +46,8 @@ if __name__ == '__main__':
     # ((5 + 5 - 3) * 10) + 10
     #arvore ou pilha de expressoes
     resultado = Soma(Multiplicar(Subtracao(Soma(Numero(5), Numero(5)), Numero(3)), Numero(10)), Numero(10))
-
     print(resultado.interpretar())
+
+    resultado2 = Soma(resultado, Numero(80))
+    print(resultado2.interpretar())
     
