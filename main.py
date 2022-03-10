@@ -1,6 +1,5 @@
 import abc
 
-
 # "interface"
 class AbsExpressao(abc.ABC):
     @abc.abstractmethod
@@ -22,7 +21,7 @@ class Soma(AbsExpressao):
         self.__expressao_direita = expressao_direita
 
     #interpreta a operaçao do lado esquedo e do lado direito 
-    def interpretar(self):
+    def interpretar(self) -> Numero:
         return self.__expressao_esquerda.interpretar() + self.__expressao_direita.interpretar()
 
 class Subtracao(AbsExpressao):
@@ -30,7 +29,7 @@ class Subtracao(AbsExpressao):
         self.__expressao_esquerda = expressao_esquerda
         self.__expressao_direita = expressao_direita
 
-    def interpretar(self):
+    def interpretar(self) -> Numero:
         return self.__expressao_esquerda.interpretar() - self.__expressao_direita.interpretar()
 
 class Multiplicar(AbsExpressao):
@@ -38,7 +37,7 @@ class Multiplicar(AbsExpressao):
         self.__expressao_esquerda = expressao_esquerda
         self.__expressao_direita = expressao_direita
 
-    def interpretar(self):
+    def interpretar(self) -> Numero:
         return self.__expressao_esquerda.interpretar() * self.__expressao_direita.interpretar()
 
 
