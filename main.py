@@ -1,6 +1,6 @@
 import abc
 
-# "interface"
+# classe abstrata
 class AbsExpressao(abc.ABC):
     @abc.abstractmethod
     def interpretar(self):
