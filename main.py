@@ -1,4 +1,5 @@
 import abc
+from telnetlib import DO
 
 # classe abstrata
 class AbsExpressao(abc.ABC):
@@ -50,3 +51,26 @@ if __name__ == '__main__':
 
     resultado2 = Soma(resultado, Digito(80))
     print(resultado2.interpretar())
+
+    s = Soma(Digito(10), Digito(5))
+
+    print(s.interpretar())
+
+    print("-------Resposta do Quiz---------");
+    #expressão: ((3 * 6) + (40 - 10) ) + ((5-2) * 10)
+    #forma 1
+    print("Forma 1: ")
+    resultado = Soma(Soma(Multiplicar(Digito(3), Digito(6)), Subtracao(Digito(40), Digito(10))), Multiplicar(Subtracao(Digito(5), Digito(2)), Digito(10)))
+    print(resultado.interpretar())
+    print("\n");
+    #forma 2
+    lado1 = Soma(Multiplicar(Digito(3), Digito(6)), Subtracao(Digito(40), Digito(10)))
+    lado2 = Multiplicar(Subtracao(Digito(5), Digito(2)), Digito(10))
+
+    print(lado1.interpretar())
+    print(lado2.interpretar())
+    s = Soma(lado1, lado2)
+    print(s.interpretar())
+
+    
+    
