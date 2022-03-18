@@ -56,6 +56,15 @@ if __name__ == '__main__':
 
     print(s.interpretar())
 
+
+
+
+
+
+
+
+
+    """
     print("-------Resposta do Quiz---------");
     #expressão: ((3 * 6) + (40 - 10) ) + ((5-2) * 10)
     #forma 1
@@ -71,6 +80,6 @@ if __name__ == '__main__':
     print(lado2.interpretar())
     s = Soma(lado1, lado2)
     print(s.interpretar())
-
+    """
     
     
